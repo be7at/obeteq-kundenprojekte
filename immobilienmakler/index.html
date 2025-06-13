@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immobilienmakler Mustermann</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">Makler&nbsp;Mustermann</div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#">Start</a></li>
+                <li><a href="#angebote">Angebote</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+        <button class="burger" id="burger" aria-label="Menü öffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ihr Partner f&uuml;r exklusive Immobilien</h1>
+            <p>Wir finden Ihr Traumhaus – kompetent, vertrauensvoll und engagiert.</p>
+            <a href="#angebote" class="btn">Zu unseren Angeboten</a>
+        </div>
+    </section>
+    <section id="angebote" class="properties">
+        <h2>Aktuelle Immobilien</h2>
+        <div class="property-list">
+            <!-- Property Item -->
+            <div class="property" onclick="openModal('villa')">
+                <img src="https://source.unsplash.com/featured/?villa" alt="Luxus Villa">
+                <h3>Luxus Villa am See</h3>
+                <p>Wohnfl&auml;che: 350 m&sup2; &middot; Preis: 1.200.000 &euro;</p>
+            </div>
+            <!-- Property Item -->
+            <div class="property" onclick="openModal('apartment')">
+                <img src="https://source.unsplash.com/featured/?apartment" alt="Modernes Apartment">
+                <h3>Modernes Stadtapartment</h3>
+                <p>Wohnfl&auml;che: 85 m&sup2; &middot; Preis: 350.000 &euro;</p>
+            </div>
+            <!-- Property Item -->
+            <div class="property" onclick="openModal('house')">
+                <img src="https://source.unsplash.com/featured/?house" alt="Familienhaus">
+                <h3>Familienfreundliches Haus</h3>
+                <p>Wohnfl&auml;che: 150 m&sup2; &middot; Preis: 520.000 &euro;</p>
+            </div>
+        </div>
+    </section>
+    <section id="kontakt" class="contact">
+        <h2>Kontakt aufnehmen</h2>
+        <form>
+            <input type="text" placeholder="Ihr Name" required>
+            <input type="email" placeholder="Ihre E-Mail" required>
+            <textarea placeholder="Ihre Nachricht" required></textarea>
+            <button type="submit" class="btn">Absenden</button>
+        </form>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Immobilienmakler Mustermann</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
