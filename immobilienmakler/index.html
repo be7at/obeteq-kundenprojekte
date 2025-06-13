@@ -9,13 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero">
+    <header class="main-header">
+        <div class="logo">Makler&nbsp;Mustermann</div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#">Start</a></li>
+                <li><a href="#angebote">Angebote</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+        <button class="burger" id="burger" aria-label="Menü öffnen">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <section class="hero">
         <div class="hero-content">
             <h1>Ihr Partner f&uuml;r exklusive Immobilien</h1>
             <p>Wir finden Ihr Traumhaus – kompetent, vertrauensvoll und engagiert.</p>
             <a href="#angebote" class="btn">Zu unseren Angeboten</a>
         </div>
-    </header>
+    </section>
     <section id="angebote" class="properties">
         <h2>Aktuelle Immobilien</h2>
         <div class="property-list">
@@ -39,7 +53,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section id="kontakt" class="contact">
         <h2>Kontakt aufnehmen</h2>
         <form>
             <input type="text" placeholder="Ihr Name" required>
